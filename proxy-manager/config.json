@@ -19,9 +19,15 @@
     "81/tcp": "Proxy management web interface",
     "443/tcp": "HTTPS/SSL Entrance port"
   },
+  "options": {
+    "acme_server": "",
+    "acme_root_cert": ""
+  },
   "map": ["ssl:rw", "backup:rw"],
   "schema": {
     "log_level": "list(trace|debug|info|notice|warning|error|fatal)?",
-    "reset_database": "bool?"
+    "reset_database": "bool?",
+    "acme_server": "str?",
+    "acme_root_cert": "str?"
   }
 }
